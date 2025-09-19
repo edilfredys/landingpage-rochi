@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confecciones Majó - Rosalba Escorcia | Experta en Costura de Alta Gama</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -81,21 +88,21 @@
             <div class="gallery-grid">
                 <div class="gallery-item scroll-animate">
                     <div class="gallery-image">
-                        <img src="./img/vestido-gala.jpeg" alt="Vestido Gala">
+                        <img src="./img/vestido-gala.jpeg" alt="Conjunto Dama">
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Conjunto Pantalon Gala</h4>
-                        <p>Confección a medida</p>
+                        <h4>Conjunto de Dama</h4>
+                        <p>Confección a medida. Blusa con escote y pantalon con bolsillos a los lados y costura en el centro, elaborado en noche viena</p>
                     </div>
                 </div>
                 
                 <div class="gallery-item scroll-animate">
                     <div class="gallery-image">
-                        <img src="./img/mocho-dama.jpeg" alt="Conjunto Mocho">
+                        <img src="./img/mocho-dama.jpeg" alt="Conjunto Dama Pantalón Corto">
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Vestido de Gala</h4>
-                        <p>Alta costura personalizada</p>
+                        <h4>Conjunto Dama Pantalón Corto</h4>
+                        <p>Alta costura personalizada. Pantalón corto con elastico en la cintura y bolsillos a los lados, se acompaña con una blusa de cuello y manga corta elaborada en popelina</p>
                     </div>
                 </div>
                 
@@ -111,11 +118,11 @@
                 
                 <div class="gallery-item scroll-animate">
                     <div class="gallery-image">
-                       <img src="./img/niño-naval.jpeg" alt="Uniforme Naval Niño">
+                       <img src="./img/niño-naval.jpeg" alt="Conjunto de Marinos">
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Uniforme Naval de Niño</h4>
-                        <p>Diseñado a la medida</p>
+                        <h4>Conjunto de Marinos para Niños</h4>
+                        <p>Diseñado a la medida. Pantalón y camisa elaborados en lino</p>
                     </div>
                 </div>
                 
@@ -140,20 +147,20 @@
                 </div>
                 <div class="gallery-item scroll-animate">
                     <div class="gallery-image">
-                        <img src="./img/pijama4.jpeg" alt="Pantalonetas niños">
+                        <img src="./img/pijama4.jpeg" alt="Conjuntos Niñas">
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Pantalonetas para Niños</h4>
+                        <h4>Conjuntos para Niñas</h4>
                         <p>Ropa cómoda y divertida</p>
                     </div>
                 </div>
                 <div class="gallery-item scroll-animate">
                     <div class="gallery-image">
-                        <img src="./img/pijama.jpeg" alt="Pijamas para Damas y Niñas">
+                        <img src="./img/pijama3.jpeg" alt="Pijamas para Damas">
                     </div>
                     <div class="gallery-overlay">
-                        <h4>Pijamas para Damas y Niñas</h4>
-                        <p>Ropa cómoda y elegante</p>
+                        <h4>Pijamas para Damas</h4>
+                        <p>Ropa cómoda y elegante. Elaborada en piel de durazno</p>
                     </div>
                 </div>
                 <div class="gallery-item scroll-animate">
@@ -198,17 +205,18 @@
                         <i class="fas fa-phone"></i>
                         <span>+57 312 676 08 25</span>
                     </div>
+                    
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>rosalba@gmail.com</span>
+                        <span>rosalbaescorcia7@gmail.com</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Salamina, Colombia</span>
-                    </div>
+                    </div> 
                 </div>
                 
-                <a href="mailto:rosalba@confeccionesmajo.com" class="cta-button scroll-animate">Contactar Ahora</a>
+                <!-- <a href="mailto:rosalba@confeccionesmajo.com" class="cta-button scroll-animate">Contactar Ahora</a> -->
             </div>
         </div>
     </section>
@@ -269,6 +277,37 @@
         serviceCards.forEach((card, index) => {
             card.style.animationDelay = `${index * 0.1}s`;
         });
+    </script>
+    <!-- Botón flotante WhatsApp con formulario UX -->
+    <a href="#" class="whatsapp-float" id="openWhatsappForm">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+    </a>
+    <div id="whatsappModal" class="whatsapp-modal">
+        <div class="whatsapp-modal-content">
+            <span class="whatsapp-close" id="closeWhatsappForm">&times;</span>
+            <h3 style="margin-bottom:0.5rem;color:#128c7e;font-weight:600;">¿Quieres contactarnos por WhatsApp?</h3>
+            <p style="font-size:1rem;color:#444;margin-bottom:1rem;">Personaliza tu mensaje y te redirigimos al chat.</p>
+            <form id="whatsappForm">
+                <textarea id="userMessage" placeholder="Escribe tu mensaje aquí..." required style="min-height:80px;resize:vertical;"></textarea>
+                <button type="submit">Enviar a WhatsApp</button>
+            </form>
+        </div>
+    </div>
+    <script>
+    document.getElementById('openWhatsappForm').onclick = function(e) {
+        e.preventDefault();
+        document.getElementById('whatsappModal').style.display = 'flex';
+    };
+    document.getElementById('closeWhatsappForm').onclick = function() {
+        document.getElementById('whatsappModal').style.display = 'none';
+    };
+    document.getElementById('whatsappForm').onsubmit = function(e) {
+        e.preventDefault();
+        const msg = encodeURIComponent(document.getElementById('userMessage').value);
+        const phone = '573123456789'; // Cambia por tu número real
+        window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+        document.getElementById('whatsappModal').style.display = 'none';
+    };
     </script>
 </body>
 </html>
